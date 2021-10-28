@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using HoldfastSharedMethods;
 using System.Collections.Generic;
 using System;
@@ -300,8 +300,8 @@ public class HFKickActions : IHoldfastSharedMethods
 
     public void OnRoundEndFactionWinner(FactionCountry factionCountry, FactionRoundWinnerReason reason)
     {
-        
-
+        PlayerDicSteamID.Clear();
+        PlayerDicName.Clear();
     }
 
     public void OnRoundEndPlayerWinner(int playerId)
@@ -406,11 +406,5 @@ public class HFKickActions : IHoldfastSharedMethods
     {
 
 
-    }
-
-    public void OnDestroy()
-    {
-        PlayerDicSteamID.Clear();
-        PlayerDicName.Clear();
     }
 }
